@@ -1,0 +1,44 @@
+.about-studio {
+    padding: 100px 0 60px 0;
+
+    @include triangle(#20251B);
+
+    .icon-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        .box {
+            width: calc(100%/3);
+            padding: 0 15px;
+            margin: 0 0 40px 0;
+
+            @media(max-width: 800px) {
+                width: 100%;
+            }
+
+        }
+
+
+        .icon {
+            margin: 0 0 20px 0;
+            text-align: center;
+            font-size: 60px;
+        }
+
+        .title {
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 0 20px 0;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .desc {
+            text-align: center;
+            line-height: 1.4;
+            color: $textColor;
+        }
+    }
+
+}

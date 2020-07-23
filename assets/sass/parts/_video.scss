@@ -1,0 +1,53 @@
+.video {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(/assets/img/gora2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    @include triangle($mainColor);
+    @include overlay(0, 0, 0, 0.8);
+
+    .container {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+
+        a {
+
+            color: $mainColor;
+            font-size: 100px;
+
+        }
+
+        .watch-video {
+            color: $mainColor;
+
+            h4 {
+
+                text-align: center;
+                font-weight: 300;
+                margin: 40px auto 40px auto;
+                width: 60%;
+
+                @include fluid-type(14px, 20px);
+
+                @media(max-width: 800px) {
+                    width: 100%;
+                }
+            }
+
+            h6 {
+                font-size: 12px;
+
+
+            }
+        }
+
+    }
+
+
+
+}

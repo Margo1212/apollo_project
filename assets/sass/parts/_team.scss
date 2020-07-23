@@ -1,0 +1,103 @@
+.team {
+    padding: 100px 0;
+
+    .members {
+        display: flex;
+        margin: 0 -15px;
+        flex-wrap: wrap;
+
+
+
+        .member {
+            width: calc(100%/3);
+            padding: 0 15px;
+
+            @media(max-width:700px) {
+                width: 100%;
+
+            }
+
+            .photo {
+
+                margin-bottom: 20px;
+                position: relative;
+
+                img {
+                    display: block;
+                    max-width: 100%;
+
+                }
+
+                &:hover {
+                    .layer {
+                        opacity: 1;
+                    }
+
+                }
+
+                .layer {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba($color:#ffffff, $alpha: 0.8);
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: 0.3s;
+
+                    @media(max-width:700px) {
+                        position: static;
+                        margin: 20px 0 0 0;
+                        opacity: 1;
+
+                    }
+
+                    a {
+                        font-size: 18px;
+                        border: 1px solid $secondaryColor;
+                        color: $secondaryColor;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        transform: rotate(45deg);
+                        margin: 0 10px;
+                        transition: 0.3s;
+
+                        i {
+                            transform: rotate(-45deg);
+
+                        }
+
+                        &:hover {
+                            background-color: $secondaryColor;
+                            color: $mainColor;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .name {
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+
+            }
+
+            .range {
+                text-align: center;
+                font-size: 14px;
+                color: $textColor;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

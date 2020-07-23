@@ -1,0 +1,101 @@
+.skils {
+    padding: 100px 0;
+    background-image: url('/assets/img/gora.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    @include overlay(255, 255, 255, 0.5);
+
+
+
+
+    .container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+
+
+        .left-box {
+            width: 50%;
+
+
+
+            @media (max-width: 800px) {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+
+            padding: 0 15px;
+
+
+
+            h2 {
+                margin: 0 0 20px 0;
+                font-size: 22px;
+                font-weight: 600;
+                text-transform: uppercase;
+
+            }
+
+            .desc {
+                line-height: 1.4;
+                color: $textColor;
+                margin: 0 0 20px 0;
+                width: auto;
+
+            }
+
+            .author {
+                font-weight: 700;
+                margin: 0;
+            }
+        }
+
+
+        .right-box {
+            width: 50%;
+            padding: 0 15px;
+
+            @media (max-width: 800px) {
+                width: 100%;
+
+            }
+
+
+            .progressbar {
+                margin: 0 0 20px 0;
+
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0 0 8px 0;
+
+                    .name {
+                        font-weight: 700;
+                        font-size: 12px;
+                    }
+
+                    .percent {
+                        font-size: 12px;
+                    }
+
+                }
+
+                .bar {
+                    height: 4px;
+                    background-color: $textColor;
+
+                    .progress {
+                        height: 4px;
+                        background-color: $progressBarColor;
+                    }
+                }
+            }
+        }
+    }
+}
